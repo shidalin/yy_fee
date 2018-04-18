@@ -1,0 +1,117 @@
+--模块信息
+select * from dap_dapsystem where devmodule = 'fee' order by ts desc；
+--功能注册
+select * from sm_funcregister where funcode like 'FE%' order by ts desc;
+--功能注册参数
+select *
+  from sm_paramregister
+ where parentid in
+       (select CFUNID from sm_funcregister where funcode like 'FE%')
+ order by ts desc;
+--菜单注册
+select * from sm_menuitemreg where menuitemcode like 'FE%' order by ts desc;
+--功能节点默认模板设置
+select * from pub_systemplate where funnode like 'FE%' order by ts desc;
+--功能节点默认模板设置-系统
+select *
+  from pub_systemplate_base
+ where funnode like 'FE%'
+ order by ts desc;
+--打印模板
+select *
+  from pub_print_template
+ where vnodecode like 'FE%'
+ order by ts desc;
+--打印模板明细
+select *
+  from pub_print_cell
+ where ctemplateid in (select ctemplateid
+                         from pub_print_template
+                        where vnodecode like 'FE%')
+ order by ts desc;
+--单据类型（后期需要处理Z5的单据类型）
+select * from bd_billtype where nodecode like 'FE%' order by ts desc;
+--单据动作
+select *
+  from pub_billaction
+ where pk_billtypeid in
+       (select pk_billtypeid from bd_billtype where nodecode like 'FE%')
+ order by ts desc;
+--动作脚本注册
+select *
+  from pub_busiclass
+ where pk_billtypeid in
+       (select pk_billtypeid from bd_billtype where nodecode like 'FE%')
+ order by ts desc;
+--编码对象注册
+select *
+  from pub_bcr_nbcr
+ where code in
+       (select pk_billtypecode from bd_billtype where nodecode like 'FE%')
+ order by ts desc;
+--编码规则基本信息
+select *
+  from pub_bcr_RuleBase
+ where rulecode in
+       (select pk_billtypecode from bd_billtype where nodecode like 'FE%')
+ order by ts desc;
+--编码规则基本明细
+select *
+  from pub_bcr_elem
+ where pk_billcodebase in
+       (select pk_billcodebase
+          from pub_bcr_RuleBase
+         where rulecode in (select pk_billtypecode
+                              from bd_billtype
+                             where nodecode like 'FE%'))
+ order by ts desc;
+--单据模板
+select *
+  from pub_billtemplet
+ where pk_billtypecode like 'FE%'
+ order by ts desc;
+--单据模板明细
+select *
+  from pub_billtemplet_b
+ where pub_billtemplet_b.pk_billtemplet in
+       (select pk_billtemplet
+          from pub_billtemplet
+         where pk_billtypecode like 'FE%')
+ order by ts desc;
+--单据模板页签信息
+select *
+  from pub_billtemplet_t
+ where pub_billtemplet_t.pk_billtemplet in
+       (select pk_billtemplet
+          from pub_billtemplet
+         where pk_billtypecode like 'FE%')
+ order by ts desc;
+--查询模板
+select *
+  from pub_query_templet
+ where node_code in
+       (select funcode from sm_funcregister where funcode like 'FE%'
+        
+        )
+ order by ts desc;
+--查询模板明细
+select *
+  from pub_query_condition
+ where PK_TEMPLET in
+       (select id
+          from pub_query_templet
+         where node_code in
+               (select funcode from sm_funcregister where funcode like 'FE%'));
+--单据转换规则
+select * from pub_vochange t where t.dest_billtype like 'FE%' order by ts desc;
+--单据转换规则明细
+select *
+  from pub_vochange_b t1
+ where t1.pk_vochange in
+       (select t.pk_vochange
+          from pub_vochange t
+         where t.dest_billtype like 'FE%')
+ order by t1.ts desc;
+
+
+

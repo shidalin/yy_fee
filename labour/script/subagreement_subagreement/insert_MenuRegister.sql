@@ -1,0 +1,1 @@
+INSERT INTO sm_menuitemreg (ts, nodeorder, menuitemname, pk_menu, iconpath, resid, pk_menuitem, ismenutype, menudes, funcode, menuitemcode, dr ) VALUES ('2017-11-18 23:46:55', null, '人工分包协议', '1004ZZ10000000000FFL', null, 'DFEH10201', '0001ZZ10000000008M81', 'N', null, 'FEH10201', 'FEH10201', 0 );

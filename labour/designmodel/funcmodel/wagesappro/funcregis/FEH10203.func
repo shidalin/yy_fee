@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="gbk"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<bean id="funcregister" class="nc.pubapp.pade.funcmodel.vo.FuncRegister"><property name="bmf_path" value="labour\METADATA\wagesappro.bmf"/>
+<property name="busiActiveList">
+<list></list>
+</property>
+<property name="cfunid" value="0001ZZ10000000008MS1"/>
+<property name="class_name" value="nc.ui.pubapp.uif2app.ToftPanelAdaptorEx"/>
+<property name="dr" value="0"/>
+<property name="fun_name" value="人工工资审批"/>
+<property name="fun_property" value="0"/>
+<property name="funcRegisterButtonList">
+<list></list>
+</property>
+<property name="funcRegisterParamList">
+<list><bean class="nc.pubapp.pade.funcmodel.vo.FuncRegisterParam"><property name="dr" value="0"/>
+<property name="paramname" value="BeanConfigFilePath"/>
+<property name="paramvalue" value="nc/ui/fee/wagesappro/ace/view/Wagesappro_config.xml"/>
+<property name="parentid" value="0001ZZ10000000008MS1"/>
+<property name="pk_param" value="0001ZZ10000000008MS2"/>
+<property name="ts" value="2017-11-19 00:04:27"/>
+</bean>
+</list>
+</property>
+<property name="funcode" value="FEH10203"/>
+<property name="funnode_path" value="labour\designmodel\ace\client\FEH10203.fnf"/>
+<property name="funtype" value="0"/>
+<property name="isbuttonpower" value="false"/>
+<property name="isenable" value="true"/>
+<property name="isfunctype" value="false"/>
+<property name="menuModelFilePath" value="labour/designmodel/funcmodel/wagesappro/menuitemregis/FEH10203.menu"/>
+<property name="metaDataID" value="45581791-310b-4ef4-8f89-c31ca8b3e73d"/>
+<property name="moduleName" value="fee"/>
+<property name="orgtypecode" value="BUSINESSUNIT00000000"/>
+<property name="own_module" value="FEH1"/>
+<property name="pageList">
+<list></list>
+</property>
+<property name="parent_id" value="1001ZZ10000000007IU9"/>
+<property name="pk_group" value="~"/>
+<property name="ts" value="2017-11-19 00:04:27"/>
+<property name="uif2model_path" value="labour\designmodel\ace\uif2model\FEH10203.umf"/>
+</bean>
+
+</beans>

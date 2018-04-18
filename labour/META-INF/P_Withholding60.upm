@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding='gb2312'?>
+<module name="fee">
+  <public>
+	<component remote="true" singleton="true"  tx="CMT">
+	  <interface>nc.itf.fee.IWithholdingMaintain</interface>
+	  <implementation>nc.impl.fee.WithholdingMaintainImpl</implementation>
+	</component>
+
+  </public> 
+</module> 

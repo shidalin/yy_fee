@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="gbk"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="general" class="nc.pubapp.pade.code.funnode.FunNodePara">
+        <property name="moduleName" value="fee" />
+	    <property name="bpfPath" value="test.bpf"/>
+	    <property name="funcode" value="FEH10101"/>
+	    <property name="clientPackName" value="nc.ui.fee.workteam"/>
+			    <property name="metaData" value="labour\METADATA\workteam.bmf"/>
+	    <property name="xmlPath" value="labour\src\client\nc\ui\fee\workteam\ace\view\Workteam_config.xml"/>
+	    <property name="metaDataType" value="singleType" />
+		<property name="funcregispath" value="labour/designmodel/funcmodel/workteam/funcregis/FEH10101.func" />
+		<property name="quetempath" value="${quetempath}" />
+		<property name="printtempath" value="${printtempath}" />
+		<property name="systembasepath" value="labour/designmodel/systemplatebase/workteam/FEH10101/FEH10101.stb" />
+		<property name="extendSuffix" value=""/>
+		<property name="uif2ModelFilePath" value="labour\designmodel\ace\uif2model\FEH10101.umf"/>
+		<property name="busiCompName" value="labour"/>
+		<property name="metaDataId" value="4f6d4601-d065-4132-91e7-445d81700de8"/>
+	</bean>
+
+	<bean id="templet" class="nc.pubapp.pade.code.funnode.Templet">
+		<property name="tempStyle" value="1" />
+		<property name="nodeKey" value="" />
+		<property name="templetPath" value="labour/designmodel/templet/workteam/billtemplet/FEH10101.btf" />
+	</bean>
+	
+	<bean id="FilePackNameBean" class="nc.pubapp.pade.code.engine.FilePackNamePara">
+		<property name="filePackNameList">
+			 <list>
+				  <value>nc.ui.fee.workteam.action.WorkteamAddLineAction.java</value>
+				  <value>nc.ui.fee.workteam.handler.BodyAfterEditHandler.java</value>
+				  <value>nc.ui.fee.workteam.handler.BodyBeforeEditHandler.java</value>
+			 </list>
+		</property>
+	</bean>
+
+</beans>

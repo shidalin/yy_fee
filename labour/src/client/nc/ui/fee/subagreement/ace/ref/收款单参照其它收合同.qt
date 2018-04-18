@@ -1,0 +1,565 @@
+<?xml version='1.0' encoding='GBK'?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<bean id="queTemTotal" class="nc.pubapp.pade.templet.vo.QueryTempletTotal">
+<property name="conditions">
+<list>
+<bean class="nc.pubapp.pade.templet.vo.QueryCondition">
+<property name="consultCode" value="公司" />
+<property name="dataType" value="5" />
+<property name="dispSequence" value="0" />
+<property name="dispType" value="1" />
+<property name="dr" value="0" />
+<property name="fieldCode" value="pk_org" />
+<property name="fieldName" value="公司" />
+<property name="id" value="1002Z81000000000J57Y" />
+<property name="ifAutoCheck" value="true" />
+<property name="ifDataPower" value="false" />
+<property name="ifDefault" value="true" />
+<property name="ifDesc" value="false" />
+<property name="ifGroup" value="false" />
+<property name="ifImmobility" value="false" />
+<property name="ifMust" value="true" />
+<property name="ifNotMDCondition" value="false" />
+<property name="ifOrder" value="false" />
+<property name="ifSum" value="false" />
+<property name="ifUsed" value="true" />
+<property name="isAttrRefUsed" value="false" />
+<property name="isCondition" value="true" />
+<property name="isFromMetaData" value="true" />
+<property name="isMultiCorpRef" value="false" />
+<property name="isSubIncluded" value="false" />
+<property name="isSysFuncRefUsed" value="true" />
+<property name="isUserDef" value="false" />
+<property name="limit" value="9999" />
+<property name="operaCode" value="=" />
+<property name="operaName" value="等于@" />
+<property name="orderSequence" value="0" />
+<property name="pkCorp" value="@@@@" />
+<property name="pkTemplet" value="1002Z81000000000J57P" />
+<property name="returnType" value="2" />
+<property name="ts" value="2011-06-30 13:45:38" />
+<property name="value" value="#mainorg#" />
+</bean>
+<bean class="nc.pubapp.pade.templet.vo.QueryCondition">
+<property name="consultCode" value="影响因素交 易类型" />
+<property name="dataType" value="5" />
+<property name="dispSequence" value="1" />
+<property name="dispType" value="1" />
+<property name="dr" value="0" />
+<property name="fieldCode" value="ctrantypeid" />
+<property name="fieldName" value="合同类型" />
+<property name="id" value="1002Z81000000000J580" />
+<property name="ifAutoCheck" value="true" />
+<property name="ifDataPower" value="false" />
+<property name="ifDefault" value="true" />
+<property name="ifDesc" value="false" />
+<property name="ifGroup" value="false" />
+<property name="ifImmobility" value="false" />
+<property name="ifMust" value="false" />
+<property name="ifNotMDCondition" value="false" />
+<property name="ifOrder" value="false" />
+<property name="ifSum" value="false" />
+<property name="ifUsed" value="true" />
+<property name="isAttrRefUsed" value="false" />
+<property name="isCondition" value="true" />
+<property name="isFromMetaData" value="true" />
+<property name="isMultiCorpRef" value="false" />
+<property name="isSubIncluded" value="false" />
+<property name="isSysFuncRefUsed" value="false" />
+<property name="isUserDef" value="false" />
+<property name="limit" value="9999" />
+<property name="operaCode" value="=@" />
+<property name="operaName" value="等于@" />
+<property name="orderSequence" value="0" />
+<property name="pkCorp" value="@@@@" />
+<property name="pkTemplet" value="1002Z81000000000J57P" />
+<property name="returnType" value="2" />
+<property name="ts" value="2011-06-30 13:45:38" />
+</bean>
+<bean class="nc.pubapp.pade.templet.vo.QueryCondition">
+<property name="consultCode" value="客户档案" />
+<property name="dataType" value="5" />
+<property name="dispSequence" value="2" />
+<property name="dispType" value="1" />
+<property name="dr" value="0" />
+<property name="fieldCode" value="pk_customer" />
+<property name="fieldName" value="客户" />
+<property name="id" value="1002Z81000000000J581" />
+<property name="ifAutoCheck" value="true" />
+<property name="ifDataPower" value="false" />
+<property name="ifDefault" value="true" />
+<property name="ifDesc" value="false" />
+<property name="ifGroup" value="false" />
+<property name="ifImmobility" value="false" />
+<property name="ifMust" value="false" />
+<property name="ifNotMDCondition" value="false" />
+<property name="ifOrder" value="false" />
+<property name="ifSum" value="false" />
+<property name="ifUsed" value="true" />
+<property name="isAttrRefUsed" value="false" />
+<property name="isCondition" value="true" />
+<property name="isFromMetaData" value="true" />
+<property name="isMultiCorpRef" value="false" />
+<property name="isSubIncluded" value="false" />
+<property name="isSysFuncRefUsed" value="false" />
+<property name="isUserDef" value="false" />
+<property name="limit" value="9999" />
+<property name="operaCode" value="=" />
+<property name="operaName" value="等于@" />
+<property name="orderSequence" value="0" />
+<property name="pkCorp" value="@@@@" />
+<property name="pkTemplet" value="1002Z81000000000J57P" />
+<property name="returnType" value="2" />
+<property name="ts" value="2011-06-30 13:45:38" />
+</bean>
+<bean class="nc.pubapp.pade.templet.vo.QueryCondition">
+<property name="consultCode" value="人员" />
+<property name="dataType" value="5" />
+<property name="dispSequence" value="3" />
+<property name="dispType" value="1" />
+<property name="dr" value="0" />
+<property name="fieldCode" value="personnelid" />
+<property name="fieldName" value="人员" />
+<property name="id" value="1002Z81000000000J582" />
+<property name="ifAutoCheck" value="true" />
+<property name="ifDataPower" value="false" />
+<property name="ifDefault" value="true" />
+<property name="ifDesc" value="false" />
+<property name="ifGroup" value="false" />
+<property name="ifImmobility" value="false" />
+<property name="ifMust" value="false" />
+<property name="ifNotMDCondition" value="false" />
+<property name="ifOrder" value="false" />
+<property name="ifSum" value="false" />
+<property name="ifUsed" value="true" />
+<property name="isAttrRefUsed" value="false" />
+<property name="isCondition" value="true" />
+<property name="isFromMetaData" value="true" />
+<property name="isMultiCorpRef" value="false" />
+<property name="isSubIncluded" value="false" />
+<property name="isSysFuncRefUsed" value="false" />
+<property name="isUserDef" value="false" />
+<property name="limit" value="9999" />
+<property name="operaCode" value="=" />
+<property name="operaName" value="等于@" />
+<property name="orderSequence" value="0" />
+<property name="pkCorp" value="@@@@" />
+<property name="pkTemplet" value="1002Z81000000000J57P" />
+<property name="returnType" value="2" />
+<property name="ts" value="2011-06-30 13:45:38" />
+</bean>
+<bean class="nc.pubapp.pade.templet.vo.QueryCondition">
+<property name="consultCode" value="部门" />
+<property name="dataType" value="5" />
+<property name="dispSequence" value="4" />
+<property name="dispType" value="1" />
+<property name="dr" value="0" />
+<property name="fieldCode" value="depid" />
+<property name="fieldName" value="部门" />
+<property name="id" value="1002Z81000000000J583" />
+<property name="ifAutoCheck" value="true" />
+<property name="ifDataPower" value="false" />
+<property name="ifDefault" value="true" />
+<property name="ifDesc" value="false" />
+<property name="ifGroup" value="false" />
+<property name="ifImmobility" value="false" />
+<property name="ifMust" value="false" />
+<property name="ifNotMDCondition" value="false" />
+<property name="ifOrder" value="false" />
+<property name="ifSum" value="false" />
+<property name="ifUsed" value="true" />
+<property name="isAttrRefUsed" value="false" />
+<property name="isCondition" value="true" />
+<property name="isFromMetaData" value="true" />
+<property name="isMultiCorpRef" value="false" />
+<property name="isSubIncluded" value="false" />
+<property name="isSysFuncRefUsed" value="false" />
+<property name="isUserDef" value="false" />
+<property name="limit" value="9999" />
+<property name="operaCode" value="=" />
+<property name="operaName" value="等于@" />
+<property name="orderSequence" value="0" />
+<property name="pkCorp" value="@@@@" />
+<property name="pkTemplet" value="1002Z81000000000J57P" />
+<property name="returnType" value="2" />
+<property name="ts" value="2011-06-30 13:45:38" />
+</bean>
+<bean class="nc.pubapp.pade.templet.vo.QueryCondition">
+<property name="consultCode" value="-99" />
+<property name="dataType" value="0" />
+<property name="dispSequence" value="5" />
+<property name="dispType" value="1" />
+<property name="dr" value="0" />
+<property name="fieldCode" value="vbillcode" />
+<property name="fieldName" value="合同编码" />
+<property name="id" value="1002Z81000000000J584" />
+<property name="ifAutoCheck" value="true" />
+<property name="ifDataPower" value="false" />
+<property name="ifDefault" value="true" />
+<property name="ifDesc" value="false" />
+<property name="ifGroup" value="false" />
+<property name="ifImmobility" value="false" />
+<property name="ifMust" value="false" />
+<property name="ifNotMDCondition" value="false" />
+<property name="ifOrder" value="false" />
+<property name="ifSum" value="false" />
+<property name="ifUsed" value="true" />
+<property name="isAttrRefUsed" value="false" />
+<property name="isCondition" value="true" />
+<property name="isFromMetaData" value="true" />
+<property name="isMultiCorpRef" value="false" />
+<property name="isSubIncluded" value="false" />
+<property name="isSysFuncRefUsed" value="false" />
+<property name="isUserDef" value="false" />
+<property name="limit" value="9999" />
+<property name="operaCode" value="=@ left like@" />
+<property name="operaName" value="等于@左包含@" />
+<property name="orderSequence" value="0" />
+<property name="pkCorp" value="@@@@" />
+<property name="pkTemplet" value="1002Z81000000000J57P" />
+<property name="returnType" value="2" />
+<property name="ts" value="2011-06-30 13:45:38" />
+</bean>
+<bean class="nc.pubapp.pade.templet.vo.QueryCondition">
+<property name="consultCode" value="-99" />
+<property name="dataType" value="9" />
+<property name="dispSequence" value="6" />
+<property name="dispType" value="1" />
+<property name="dr" value="0" />
+<property name="fieldCode" value="ctname" />
+<property name="fieldName" value="合同名称" />
+<property name="id" value="1002Z81000000000J585" />
+<property name="ifAutoCheck" value="true" />
+<property name="ifDataPower" value="false" />
+<property name="ifDefault" value="true" />
+<property name="ifDesc" value="false" />
+<property name="ifGroup" value="false" />
+<property name="ifImmobility" value="false" />
+<property name="ifMust" value="false" />
+<property name="ifNotMDCondition" value="false" />
+<property name="ifOrder" value="false" />
+<property name="ifSum" value="false" />
+<property name="ifUsed" value="true" />
+<property name="isAttrRefUsed" value="false" />
+<property name="isCondition" value="true" />
+<property name="isFromMetaData" value="true" />
+<property name="isMultiCorpRef" value="false" />
+<property name="isSubIncluded" value="false" />
+<property name="isSysFuncRefUsed" value="false" />
+<property name="isUserDef" value="false" />
+<property name="limit" value="9999" />
+<property name="operaCode" value="=@ left like@" />
+<property name="operaName" value="等于@左包含@" />
+<property name="orderSequence" value="0" />
+<property name="pkCorp" value="@@@@" />
+<property name="pkTemplet" value="1002Z81000000000J57P" />
+<property name="returnType" value="2" />
+<property name="ts" value="2011-06-30 13:45:38" />
+</bean>
+<bean class="nc.pubapp.pade.templet.vo.QueryCondition">
+<property name="consultCode" value="-99" />
+<property name="dataType" value="3" />
+<property name="dispSequence" value="7" />
+<property name="dispType" value="1" />
+<property name="dr" value="0" />
+<property name="fieldCode" value="subscribedate" />
+<property name="fieldName" value="合同签订日期" />
+<property name="id" value="1002Z81000000000J586" />
+<property name="ifAutoCheck" value="true" />
+<property name="ifDataPower" value="false" />
+<property name="ifDefault" value="true" />
+<property name="ifDesc" value="false" />
+<property name="ifGroup" value="false" />
+<property name="ifImmobility" value="false" />
+<property name="ifMust" value="false" />
+<property name="ifNotMDCondition" value="false" />
+<property name="ifOrder" value="false" />
+<property name="ifSum" value="false" />
+<property name="ifUsed" value="true" />
+<property name="isAttrRefUsed" value="false" />
+<property name="isCondition" value="true" />
+<property name="isFromMetaData" value="true" />
+<property name="isMultiCorpRef" value="false" />
+<property name="isSubIncluded" value="false" />
+<property name="isSysFuncRefUsed" value="true" />
+<property name="isUserDef" value="false" />
+<property name="limit" value="9999" />
+<property name="operaCode" value="between@=@" />
+<property name="operaName" value="介于@等于@" />
+<property name="orderSequence" value="0" />
+<property name="pkCorp" value="@@@@" />
+<property name="pkTemplet" value="1002Z81000000000J57P" />
+<property name="returnType" value="2" />
+<property name="ts" value="2011-08-15 11:35:12" />
+</bean>
+<bean class="nc.pubapp.pade.templet.vo.QueryCondition">
+<property name="consultCode" value="-99" />
+<property name="dataType" value="3" />
+<property name="dispSequence" value="8" />
+<property name="dispType" value="1" />
+<property name="dr" value="0" />
+<property name="fieldCode" value="valdate" />
+<property name="fieldName" value="计划生效日期" />
+<property name="id" value="1002Z81000000000J587" />
+<property name="ifAutoCheck" value="true" />
+<property name="ifDataPower" value="false" />
+<property name="ifDefault" value="true" />
+<property name="ifDesc" value="false" />
+<property name="ifGroup" value="false" />
+<property name="ifImmobility" value="false" />
+<property name="ifMust" value="false" />
+<property name="ifNotMDCondition" value="false" />
+<property name="ifOrder" value="false" />
+<property name="ifSum" value="false" />
+<property name="ifUsed" value="true" />
+<property name="isAttrRefUsed" value="false" />
+<property name="isCondition" value="true" />
+<property name="isFromMetaData" value="true" />
+<property name="isMultiCorpRef" value="false" />
+<property name="isSubIncluded" value="false" />
+<property name="isSysFuncRefUsed" value="true" />
+<property name="isUserDef" value="false" />
+<property name="limit" value="9999" />
+<property name="operaCode" value="between@=@" />
+<property name="operaName" value="介于@等于@" />
+<property name="orderSequence" value="0" />
+<property name="pkCorp" value="@@@@" />
+<property name="pkTemplet" value="1002Z81000000000J57P" />
+<property name="returnType" value="2" />
+<property name="ts" value="2011-08-15 11:34:49" />
+</bean>
+<bean class="nc.pubapp.pade.templet.vo.QueryCondition">
+<property name="consultCode" value="-99" />
+<property name="dataType" value="3" />
+<property name="dispSequence" value="9" />
+<property name="dispType" value="1" />
+<property name="dr" value="0" />
+<property name="fieldCode" value="invallidate" />
+<property name="fieldName" value="计划终止日期" />
+<property name="id" value="1002Z81000000000J588" />
+<property name="ifAutoCheck" value="true" />
+<property name="ifDataPower" value="false" />
+<property name="ifDefault" value="true" />
+<property name="ifDesc" value="false" />
+<property name="ifGroup" value="false" />
+<property name="ifImmobility" value="false" />
+<property name="ifMust" value="false" />
+<property name="ifNotMDCondition" value="false" />
+<property name="ifOrder" value="false" />
+<property name="ifSum" value="false" />
+<property name="ifUsed" value="true" />
+<property name="isAttrRefUsed" value="false" />
+<property name="isCondition" value="true" />
+<property name="isFromMetaData" value="true" />
+<property name="isMultiCorpRef" value="false" />
+<property name="isSubIncluded" value="false" />
+<property name="isSysFuncRefUsed" value="true" />
+<property name="isUserDef" value="false" />
+<property name="limit" value="9999" />
+<property name="operaCode" value="between@=@" />
+<property name="operaName" value="介于@等于@" />
+<property name="orderSequence" value="0" />
+<property name="pkCorp" value="@@@@" />
+<property name="pkTemplet" value="1002Z81000000000J57P" />
+<property name="returnType" value="2" />
+<property name="ts" value="2011-08-15 11:34:49" />
+</bean>
+<bean class="nc.pubapp.pade.templet.vo.QueryCondition">
+<property name="consultCode" value="-99" />
+<property name="dataType" value="3" />
+<property name="dispSequence" value="10" />
+<property name="dispType" value="1" />
+<property name="dr" value="0" />
+<property name="fieldCode" value="actualvalidate" />
+<property name="fieldName" value="实际生效日期" />
+<property name="id" value="1002Z81000000000J589" />
+<property name="ifAutoCheck" value="true" />
+<property name="ifDataPower" value="false" />
+<property name="ifDefault" value="true" />
+<property name="ifDesc" value="false" />
+<property name="ifGroup" value="false" />
+<property name="ifImmobility" value="false" />
+<property name="ifMust" value="false" />
+<property name="ifNotMDCondition" value="false" />
+<property name="ifOrder" value="false" />
+<property name="ifSum" value="false" />
+<property name="ifUsed" value="true" />
+<property name="isAttrRefUsed" value="false" />
+<property name="isCondition" value="true" />
+<property name="isFromMetaData" value="true" />
+<property name="isMultiCorpRef" value="false" />
+<property name="isSubIncluded" value="false" />
+<property name="isSysFuncRefUsed" value="true" />
+<property name="isUserDef" value="false" />
+<property name="limit" value="9999" />
+<property name="operaCode" value="between@=@" />
+<property name="operaName" value="介于@等于@" />
+<property name="orderSequence" value="0" />
+<property name="pkCorp" value="@@@@" />
+<property name="pkTemplet" value="1002Z81000000000J57P" />
+<property name="returnType" value="2" />
+<property name="ts" value="2011-08-15 11:34:49" />
+</bean>
+<bean class="nc.pubapp.pade.templet.vo.QueryCondition">
+<property name="consultCode" value="-99" />
+<property name="dataType" value="3" />
+<property name="dispSequence" value="11" />
+<property name="dispType" value="1" />
+<property name="dr" value="0" />
+<property name="fieldCode" value="actualinvalidate" />
+<property name="fieldName" value="实际终止日期" />
+<property name="id" value="1002Z81000000000J58A" />
+<property name="ifAutoCheck" value="true" />
+<property name="ifDataPower" value="false" />
+<property name="ifDefault" value="true" />
+<property name="ifDesc" value="false" />
+<property name="ifGroup" value="false" />
+<property name="ifImmobility" value="false" />
+<property name="ifMust" value="false" />
+<property name="ifNotMDCondition" value="false" />
+<property name="ifOrder" value="false" />
+<property name="ifSum" value="false" />
+<property name="ifUsed" value="true" />
+<property name="isAttrRefUsed" value="false" />
+<property name="isCondition" value="true" />
+<property name="isFromMetaData" value="true" />
+<property name="isMultiCorpRef" value="false" />
+<property name="isSubIncluded" value="false" />
+<property name="isSysFuncRefUsed" value="true" />
+<property name="isUserDef" value="false" />
+<property name="limit" value="9999" />
+<property name="operaCode" value="between@=@" />
+<property name="operaName" value="介于@等于@" />
+<property name="orderSequence" value="0" />
+<property name="pkCorp" value="@@@@" />
+<property name="pkTemplet" value="1002Z81000000000J57P" />
+<property name="returnType" value="2" />
+<property name="ts" value="2011-08-15 11:34:49" />
+</bean>
+<bean class="nc.pubapp.pade.templet.vo.QueryCondition">
+<property name="consultCode" value="项目" />
+<property name="dataType" value="5" />
+<property name="dispSequence" value="12" />
+<property name="dispType" value="1" />
+<property name="dr" value="0" />
+<property name="fieldCode" value="cprojectid" />
+<property name="fieldName" value="项目" />
+<property name="id" value="1002Z81000000000J58C" />
+<property name="ifAutoCheck" value="true" />
+<property name="ifDataPower" value="false" />
+<property name="ifDefault" value="true" />
+<property name="ifDesc" value="false" />
+<property name="ifGroup" value="false" />
+<property name="ifImmobility" value="false" />
+<property name="ifMust" value="false" />
+<property name="ifNotMDCondition" value="false" />
+<property name="ifOrder" value="false" />
+<property name="ifSum" value="false" />
+<property name="ifUsed" value="true" />
+<property name="isAttrRefUsed" value="false" />
+<property name="isCondition" value="true" />
+<property name="isFromMetaData" value="true" />
+<property name="isMultiCorpRef" value="false" />
+<property name="isSubIncluded" value="false" />
+<property name="isSysFuncRefUsed" value="false" />
+<property name="isUserDef" value="false" />
+<property name="limit" value="9999" />
+<property name="operaCode" value="=" />
+<property name="operaName" value="等于@" />
+<property name="orderSequence" value="0" />
+<property name="pkCorp" value="@@@@" />
+<property name="pkTemplet" value="1002Z81000000000J57P" />
+<property name="returnType" value="2" />
+<property name="ts" value="2011-06-30 13:45:38" />
+</bean>
+<bean class="nc.pubapp.pade.templet.vo.QueryCondition">
+<property name="consultCode" value="物料" />
+<property name="dataType" value="5" />
+<property name="dispSequence" value="13" />
+<property name="dispType" value="1" />
+<property name="dr" value="0" />
+<property name="fieldCode" value="pk_ct_ar_b.pk_srcmaterial" />
+<property name="fieldName" value="其他收合同基本.物料" />
+<property name="id" value="1002Z81000000000J58E" />
+<property name="ifAutoCheck" value="true" />
+<property name="ifDataPower" value="false" />
+<property name="ifDefault" value="true" />
+<property name="ifDesc" value="false" />
+<property name="ifGroup" value="false" />
+<property name="ifImmobility" value="false" />
+<property name="ifMust" value="false" />
+<property name="ifNotMDCondition" value="false" />
+<property name="ifOrder" value="false" />
+<property name="ifSum" value="false" />
+<property name="ifUsed" value="true" />
+<property name="isAttrRefUsed" value="false" />
+<property name="isCondition" value="true" />
+<property name="isFromMetaData" value="true" />
+<property name="isMultiCorpRef" value="false" />
+<property name="isSubIncluded" value="false" />
+<property name="isSysFuncRefUsed" value="false" />
+<property name="isUserDef" value="false" />
+<property name="limit" value="9999" />
+<property name="operaCode" value="=" />
+<property name="operaName" value="等于@" />
+<property name="orderSequence" value="0" />
+<property name="pkCorp" value="@@@@" />
+<property name="pkTemplet" value="1002Z81000000000J57P" />
+<property name="returnType" value="2" />
+<property name="ts" value="2011-06-30 13:45:38" />
+</bean>
+<bean class="nc.pubapp.pade.templet.vo.QueryCondition">
+<property name="consultCode" value="物料基本分类" />
+<property name="dataType" value="5" />
+<property name="dispSequence" value="14" />
+<property name="dispType" value="0" />
+<property name="dr" value="0" />
+<property name="fieldCode" value="pk_ct_ar_b.pk_marbasclass" />
+<property name="fieldName" value="其他收合同基本.物料分类编码" />
+<property name="id" value="1002Z81000000000J58F" />
+<property name="ifAutoCheck" value="true" />
+<property name="ifDataPower" value="false" />
+<property name="ifDefault" value="true" />
+<property name="ifDesc" value="false" />
+<property name="ifGroup" value="false" />
+<property name="ifImmobility" value="false" />
+<property name="ifMust" value="false" />
+<property name="ifNotMDCondition" value="false" />
+<property name="ifOrder" value="false" />
+<property name="ifSum" value="false" />
+<property name="ifUsed" value="true" />
+<property name="isAttrRefUsed" value="false" />
+<property name="isCondition" value="true" />
+<property name="isFromMetaData" value="true" />
+<property name="isMultiCorpRef" value="false" />
+<property name="isSubIncluded" value="false" />
+<property name="isSysFuncRefUsed" value="false" />
+<property name="isUserDef" value="false" />
+<property name="limit" value="9999" />
+<property name="operaCode" value="=" />
+<property name="operaName" value="等于@" />
+<property name="orderSequence" value="0" />
+<property name="pkCorp" value="@@@@" />
+<property name="pkTemplet" value="1002Z81000000000J57P" />
+<property name="returnType" value="2" />
+<property name="ts" value="2011-06-30 13:45:38" />
+</bean>
+</list>
+</property>
+<property name="templet"><bean class="nc.pubapp.pade.templet.vo.QueryTemplet">
+<property name="devorg" value="00001" />
+<property name="id" value="1002Z81000000000J57P" />
+<property name="layer" value="0" />
+<property name="metaclass" value="91ac3a8f-6b81-4064-af8c-36f44fffd4d5" />
+<property name="modelCode" value="402030041" />
+<property name="modelName" value="收款单参照其它收合同" />
+<property name="nodeCode" value="40203004" />
+<property name="pkCorp" value="@@@@" />
+<property name="resid" value="1402030040008" />
+<property name="ts" value="2011-08-15 11:35:12" />
+</bean>
+</property>
+
+</bean>
+
+</beans>

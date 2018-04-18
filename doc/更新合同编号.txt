@@ -1,0 +1,5 @@
+update md_property t
+   set t.datatype = (select t.id
+                       from md_class t
+                      where t.displayname like '%合同编号(自定义档案)%')
+ where t.name = 'contratcno'

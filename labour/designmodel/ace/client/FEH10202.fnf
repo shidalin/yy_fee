@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="gbk"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="general" class="nc.pubapp.pade.code.funnode.FunNodePara">
+    	<property name="moduleName" value="fee" />
+	    <property name="bpfPath" value="test.bpf"/>
+	    <property name="funcode" value="FEH10202"/>
+	    <property name="clientPackName" value="nc.ui.fee.withholding"/>
+			    	<property name="dbilldDate" value="Dbilldate"/>
+			    <property name="metaData" value="labour\METADATA\withholding.bmf"/>
+	    <property name="xmlPath" value="labour\src\client\nc\ui\fee\withholding\ace\view\Withholding_config.xml"/>
+		<property name="metaDataType" value="singleMulti" />
+	    <property name="funcregispath" value="labour/designmodel/funcmodel/withholding/funcregis/FEH10202.func" />
+	    <property name="quetempath" value="labour/designmodel/templet/withholding/querytemplet/FEH10202.qtf" />
+	    <property name="printtempath" value="labour/designmodel/templet/withholding/outtemplet/FEH10202.otf" />
+	    <property name="systembasepath" value="labour/designmodel/systemplatebase/withholding/FEH10202/FEH10202.stb" />
+	    <property name="extendSuffix" value=""/>
+	    <property name="uif2ModelFilePath" value="labour\designmodel\ace\uif2model\FEH10202.umf"/>
+	    <property name="busiCompName" value="labour"/>
+	    <property name="metaDataId" value="7182e157-71b7-49ec-a31f-f1077f9b618d"/>
+</bean>
+
+	<bean id="templet" class="nc.pubapp.pade.code.funnode.Templet">
+	    <property name="tempStyle" value="0" />
+	    <property name="nodeKey" value="" />
+	    <property name="templetPath" value="labour/designmodel/templet/withholding/billtemplet/FEH10202.btf" />
+	</bean>
+
+	<bean id="HTBEHpara" class="nc.pubapp.pade.code.funnode.HeadTailBeforeEditHandlerPara">
+	</bean>
+	
+	<bean id="HTAEHpara" class="nc.pubapp.pade.code.funnode.HeadTailAfterEditHandlerPara">
+	</bean>
+	
+	<bean id="SerPropara" class="nc.pubapp.pade.code.funnode.ServiceProxyPara">
+							<property name="delete">
+				<bean class="nc.pubapp.pade.code.funnode.ServiceProxyItemPara">
+					<property name="fullClassName" value="nc.itf.fee.IWithholdingMaintain" />
+					<property name="itmClassName" value=".IWithholdingMaintain" />
+					<property name="methodName" value="delete" />
+				</bean>
+			</property>
+							<property name="insert">
+				<bean class="nc.pubapp.pade.code.funnode.ServiceProxyItemPara">
+					<property name="fullClassName" value="nc.itf.fee.IWithholdingMaintain" />
+					<property name="itmClassName" value=".IWithholdingMaintain" />
+					<property name="methodName" value="insert" />
+				</bean>
+			</property>
+							<property name="update">
+				<bean class="nc.pubapp.pade.code.funnode.ServiceProxyItemPara">
+					<property name="fullClassName" value="nc.itf.fee.IWithholdingMaintain" />
+					<property name="itmClassName" value=".IWithholdingMaintain" />
+					<property name="methodName" value="update" />
+				</bean>
+			</property>
+											<property name="queryAllPk">
+				<bean class="nc.pubapp.pade.code.funnode.ServiceProxyItemPara">
+					<property name="fullClassName" value="nc.itf.fee.IWithholdingMaintain" />
+					<property name="itmClassName" value=".IWithholdingMaintain" />
+					<property name="methodName" value="queryPKs" />
+				</bean>
+			</property>
+							<property name="queryBillByPk">
+				<bean class="nc.pubapp.pade.code.funnode.ServiceProxyItemPara">
+					<property name="fullClassName" value="nc.itf.fee.IWithholdingMaintain" />
+					<property name="itmClassName" value=".IWithholdingMaintain" />
+					<property name="methodName" value="queryBillByPK" />
+				</bean>
+			</property>
+			</bean>
+	
+	<bean id="FilePackNameBean" class="nc.pubapp.pade.code.engine.FilePackNamePara">
+    	<property name="filePackNameList">
+			<list>
+						        	<value>nc.ui.fee.withholding.ace.serviceproxy.AceWithholdingDeleteProxy.java</value>
+		      			        	            <value>nc.ui.fee.withholding.handler.OrgChangedHandler.java</value>
+		        <value>nc.ui.fee.withholding.ace.handler.AceAddHandler.java</value>
+		        <value>nc.ui.fee.withholding.ace.handler.AceHeadTailAfterEditHandler.java</value>
+		        <value>nc.ui.fee.withholding.ace.handler.AceHeadTailBeforeEditHandler.java</value>
+		        <value>nc.ui.fee.withholding.ace.handler.AceOrgChangedHandler.java</value>
+		        <value>nc.ui.fee.withholding.ace.serviceproxy.AceWithholdingMaintainProxy.java</value>
+		        <value>nc.ui.fee.withholding.action.WithholdingAddAction.java</value>
+		        <value>nc.ui.fee.withholding.action.WithholdingDeleteAction.java</value>
+		        <value>nc.ui.fee.withholding.action.WithholdingEditAction.java</value>
+		        <value>nc.ui.fee.withholding.action.CopyActionProcessor.java</value>
+		        <value>nc.ui.fee.withholding.query.WithholdingQueryConditionInitializer.java</value>
+	     	</list>
+	    </property>
+	</bean>
+
+</beans>

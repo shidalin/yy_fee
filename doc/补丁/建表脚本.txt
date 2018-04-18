@@ -1,0 +1,467 @@
+-- Create table 人工分包协议主表
+create table FEE_SUBAGREEMENT
+(
+  pk_subagreement CHAR(20) not null,
+  pk_group        VARCHAR2(20) default '~',
+  pk_org          VARCHAR2(20) default '~',
+  pk_org_v        VARCHAR2(20) default '~',
+  pk_billtypecode VARCHAR2(20),
+  pk_billtypeid   VARCHAR2(20) default '~',
+  vbillcode       VARCHAR2(50),
+  contratcno      VARCHAR2(50),
+  serviceno       VARCHAR2(50),
+  subcontractname VARCHAR2(50),
+  signdate        CHAR(19),
+  constartdate    CHAR(19),
+  conenddate      CHAR(19),
+  pk_teamwork     VARCHAR2(20) default '~',
+  pk_dept         VARCHAR2(20) default '~',
+  pk_psndoc       VARCHAR2(20) default '~',
+  contractmny     NUMBER(20,8),
+  overview        VARCHAR2(200),
+  dbilldate       CHAR(19),
+  creator         VARCHAR2(20) default '~',
+  creationtime    CHAR(19),
+  modifier        VARCHAR2(20) default '~',
+  modifiedtime    CHAR(19),
+  vmemo           VARCHAR2(200),
+  vdef1           VARCHAR2(101),
+  vdef2           VARCHAR2(101),
+  vdef3           VARCHAR2(101),
+  vdef4           VARCHAR2(101),
+  vdef5           VARCHAR2(101),
+  vdef6           VARCHAR2(101),
+  vdef7           VARCHAR2(101),
+  vdef8           VARCHAR2(101),
+  vdef9           VARCHAR2(101),
+  vdef10          VARCHAR2(101),
+  vdef11          VARCHAR2(101),
+  vdef12          VARCHAR2(101),
+  vdef13          VARCHAR2(101),
+  vdef14          VARCHAR2(101),
+  vdef15          VARCHAR2(101),
+  vdef16          VARCHAR2(101),
+  vdef17          VARCHAR2(101),
+  vdef18          VARCHAR2(101),
+  vdef19          VARCHAR2(101),
+  vdef20          VARCHAR2(101),
+  ts              CHAR(19),
+  dr              INTEGER default 0
+)
+tablespace NNC_DATA01
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 512K
+    next 512K
+    minextents 1
+    maxextents unlimited
+    pctincrease 0
+  );
+-- Create/Recreate primary, unique and foreign key constraints 
+alter table FEE_SUBAGREEMENT
+  add constraint PK_EE_SUBAGREEMENT primary key (PK_SUBAGREEMENT)
+  using index 
+  tablespace NNC_DATA01
+  pctfree 10
+  initrans 2
+  maxtrans 255
+  storage
+  (
+    initial 512K
+    next 512K
+    minextents 1
+    maxextents unlimited
+    pctincrease 0
+  );
+-- Create table 人工分包协议子表
+create table FEE_SUBAGREEMENT_B
+(
+  pk_subagreement_b CHAR(20) not null,
+  pk_group          VARCHAR2(20) default '~',
+  pk_org            VARCHAR2(20) default '~',
+  pk_org_v          VARCHAR2(20) default '~',
+  crowno            VARCHAR2(50),
+  name              VARCHAR2(50),
+  sex               VARCHAR2(50),
+  age               INTEGER,
+  telphone          VARCHAR2(50),
+  idnumber          VARCHAR2(50),
+  pleader           VARCHAR2(20) default '~',
+  vmemo             VARCHAR2(200),
+  csourcetypecode   VARCHAR2(50),
+  vsourcecode       VARCHAR2(40),
+  csourceid         VARCHAR2(50),
+  csourcebid        VARCHAR2(50),
+  vsourcerowno      VARCHAR2(20),
+  vsourcetrantype   VARCHAR2(50),
+  vbdef1            VARCHAR2(101),
+  vbdef2            VARCHAR2(101),
+  vbdef3            VARCHAR2(101),
+  vbdef4            VARCHAR2(101),
+  vbdef5            VARCHAR2(101),
+  vbdef6            VARCHAR2(101),
+  vbdef7            VARCHAR2(101),
+  vbdef8            VARCHAR2(101),
+  vbdef9            VARCHAR2(101),
+  vbdef10           VARCHAR2(101),
+  vbdef11           VARCHAR2(101),
+  vbdef12           VARCHAR2(101),
+  vbdef13           VARCHAR2(101),
+  vbdef14           VARCHAR2(101),
+  vbdef15           VARCHAR2(101),
+  vbdef16           VARCHAR2(101),
+  vbdef17           VARCHAR2(101),
+  vbdef18           VARCHAR2(101),
+  vbdef19           VARCHAR2(101),
+  vbdef20           VARCHAR2(101),
+  pk_subagreement   CHAR(20) not null,
+  ts                CHAR(19),
+  dr                INTEGER default 0
+)
+tablespace NNC_DATA01
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 512K
+    next 512K
+    minextents 1
+    maxextents unlimited
+    pctincrease 0
+  );
+-- Create/Recreate primary, unique and foreign key constraints 
+alter table FEE_SUBAGREEMENT_B
+  add constraint PK_SUBAGREEMENT_B primary key (PK_SUBAGREEMENT_B)
+  using index 
+  tablespace NNC_DATA01
+  pctfree 10
+  initrans 2
+  maxtrans 255
+  storage
+  (
+    initial 512K
+    next 512K
+    minextents 1
+    maxextents unlimited
+    pctincrease 0
+  );
+-- Create table 人工工资审批主表
+create table FEE_WAGESAPPRO
+(
+  pk_wagesappro   CHAR(20) not null,
+  pk_group        VARCHAR2(20) default '~',
+  pk_org          VARCHAR2(20) default '~',
+  pk_org_v        VARCHAR2(20) default '~',
+  vbillcode       VARCHAR2(50),
+  contratcno      VARCHAR2(50),
+  serviceno       VARCHAR2(50),
+  workstartdate   CHAR(19),
+  workenddate     CHAR(19),
+  wageperiod      VARCHAR2(50),
+  feecount        INTEGER,
+  pk_customer     VARCHAR2(20) default '~',
+  address         VARCHAR2(50),
+  dbilldate       CHAR(19),
+  vbillstatus     VARCHAR2(50),
+  pk_billtypecode VARCHAR2(20),
+  pk_billtypeid   VARCHAR2(20) default '~',
+  creator         VARCHAR2(20) default '~',
+  creationtime    CHAR(19),
+  modifier        VARCHAR2(20) default '~',
+  modifiedtime    CHAR(19),
+  vapproveid      VARCHAR2(20) default '~',
+  tapprovetime    CHAR(19),
+  vapprovenote    VARCHAR2(128),
+  vmemo           VARCHAR2(200),
+  vdef1           VARCHAR2(101),
+  vdef2           VARCHAR2(101),
+  vdef3           VARCHAR2(101),
+  vdef4           VARCHAR2(101),
+  vdef5           VARCHAR2(101),
+  vdef6           VARCHAR2(101),
+  vdef7           VARCHAR2(101),
+  vdef8           VARCHAR2(101),
+  vdef9           VARCHAR2(101),
+  vdef10          VARCHAR2(101),
+  vdef11          VARCHAR2(101),
+  vdef12          VARCHAR2(101),
+  vdef13          VARCHAR2(101),
+  vdef14          VARCHAR2(101),
+  vdef15          VARCHAR2(101),
+  vdef16          VARCHAR2(101),
+  vdef17          VARCHAR2(101),
+  vdef18          VARCHAR2(101),
+  vdef19          VARCHAR2(101),
+  vdef20          VARCHAR2(101),
+  ts              CHAR(19),
+  dr              INTEGER default 0
+)
+tablespace NNC_DATA01
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 512K
+    next 512K
+    minextents 1
+    maxextents unlimited
+    pctincrease 0
+  );
+-- Create/Recreate primary, unique and foreign key constraints 
+alter table FEE_WAGESAPPRO
+  add constraint PK_FEE_WAGESAPPRO primary key (PK_WAGESAPPRO)
+  using index 
+  tablespace NNC_DATA01
+  pctfree 10
+  initrans 2
+  maxtrans 255
+  storage
+  (
+    initial 512K
+    next 512K
+    minextents 1
+    maxextents unlimited
+    pctincrease 0
+  );
+-- Create table 人工工资审批子表
+create table FEE_WAGESAPPRO_B
+(
+  pk_wagesappro_b CHAR(20) not null,
+  pk_group        VARCHAR2(20) default '~',
+  pk_org          VARCHAR2(20) default '~',
+  pk_org_v        VARCHAR2(20) default '~',
+  crowno          VARCHAR2(50),
+  name            VARCHAR2(50),
+  sex             VARCHAR2(50),
+  age             INTEGER,
+  telphone        VARCHAR2(50),
+  idnumber        VARCHAR2(50),
+  pleader         VARCHAR2(20) default '~',
+  worktype        VARCHAR2(20) default '~',
+  workdays        NUMBER(20,8),
+  daywages        NUMBER(20,8),
+  shouldwages     NUMBER(20,8),
+  psntax          NUMBER(20,8),
+  realwages       NUMBER(20,8),
+  signature       VARCHAR2(50),
+  csourcetypecode VARCHAR2(50),
+  vsourcecode     VARCHAR2(40),
+  csourceid       VARCHAR2(50),
+  csourcebid      VARCHAR2(50),
+  vsourcerowno    VARCHAR2(20),
+  vsourcetrantype VARCHAR2(50),
+  vmemo           VARCHAR2(200),
+  vbdef1          VARCHAR2(101),
+  vbdef2          VARCHAR2(101),
+  vbdef3          VARCHAR2(101),
+  vbdef4          VARCHAR2(101),
+  vbdef5          VARCHAR2(101),
+  vbdef6          VARCHAR2(101),
+  vbdef7          VARCHAR2(101),
+  vbdef8          VARCHAR2(101),
+  vbdef9          VARCHAR2(101),
+  vbdef10         VARCHAR2(101),
+  vbdef11         VARCHAR2(101),
+  vbdef12         VARCHAR2(101),
+  vbdef13         VARCHAR2(101),
+  vbdef14         VARCHAR2(101),
+  vbdef15         VARCHAR2(101),
+  vbdef16         VARCHAR2(101),
+  vbdef17         VARCHAR2(101),
+  vbdef18         VARCHAR2(101),
+  vbdef19         VARCHAR2(101),
+  vbdef20         VARCHAR2(101),
+  pk_wagesappro   CHAR(20) not null,
+  ts              CHAR(19),
+  dr              INTEGER default 0
+)
+tablespace NNC_DATA01
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 512K
+    next 512K
+    minextents 1
+    maxextents unlimited
+    pctincrease 0
+  );
+-- Create/Recreate primary, unique and foreign key constraints 
+alter table FEE_WAGESAPPRO_B
+  add constraint PK_EE_WAGESAPPRO_B primary key (PK_WAGESAPPRO_B)
+  using index 
+  tablespace NNC_DATA01
+  pctfree 10
+  initrans 2
+  maxtrans 255
+  storage
+  (
+    initial 512K
+    next 512K
+    minextents 1
+    maxextents unlimited
+    pctincrease 0
+  );
+-- Create table 人工费预提
+create table FEE_WITHHOLDING
+(
+  pk_withholding  CHAR(20) not null,
+  pk_group        VARCHAR2(20) default '~',
+  pk_org          VARCHAR2(20) default '~',
+  pk_org_v        VARCHAR2(20) default '~',
+  pk_billtypecode VARCHAR2(20),
+  pk_billtypeid   VARCHAR2(20) default '~',
+  vbillcode       VARCHAR2(50),
+  contratcno      VARCHAR2(50),
+  serviceno       VARCHAR2(50),
+  startdate       CHAR(19),
+  enddate         CHAR(19),
+  contractmny     NUMBER(20,8),
+  withholdingmny  NUMBER(20,8),
+  promanager      VARCHAR2(20) default '~',
+  stylist         VARCHAR2(20) default '~',
+  prostyle        VARCHAR2(20) default '~',
+  overview        VARCHAR2(200),
+  dbilldate       CHAR(19),
+  isaffirm        CHAR(1),
+  creator         VARCHAR2(20) default '~',
+  creationtime    CHAR(19),
+  modifier        VARCHAR2(20) default '~',
+  modifiedtime    CHAR(19),
+  vmemo           VARCHAR2(200),
+  csourcetypecode CHAR(20),
+  vsourcecode     VARCHAR2(40),
+  csourceid       CHAR(20),
+  csourcebid      CHAR(20),
+  vsourcerowno    VARCHAR2(20),
+  vsourcetrantype CHAR(20),
+  vdef1           VARCHAR2(101),
+  vdef2           VARCHAR2(101),
+  vdef3           VARCHAR2(101),
+  vdef4           VARCHAR2(101),
+  vdef5           VARCHAR2(101),
+  vdef6           VARCHAR2(101),
+  vdef7           VARCHAR2(101),
+  vdef8           VARCHAR2(101),
+  vdef9           VARCHAR2(101),
+  vdef10          VARCHAR2(101),
+  vdef11          VARCHAR2(101),
+  vdef12          VARCHAR2(101),
+  vdef13          VARCHAR2(101),
+  vdef14          VARCHAR2(101),
+  vdef15          VARCHAR2(101),
+  vdef16          VARCHAR2(101),
+  vdef17          VARCHAR2(101),
+  vdef18          VARCHAR2(101),
+  vdef19          VARCHAR2(101),
+  vdef20          VARCHAR2(101),
+  ts              CHAR(19),
+  dr              INTEGER default 0
+)
+tablespace NNC_DATA01
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 512K
+    next 512K
+    minextents 1
+    maxextents unlimited
+    pctincrease 0
+  );
+-- Create/Recreate primary, unique and foreign key constraints 
+alter table FEE_WITHHOLDING
+  add constraint PK_FEE_WITHHOLDING primary key (PK_WITHHOLDING)
+  using index 
+  tablespace NNC_DATA01
+  pctfree 10
+  initrans 2
+  maxtrans 255
+  storage
+  (
+    initial 512K
+    next 512K
+    minextents 1
+    maxextents unlimited
+    pctincrease 0
+  );
+-- Create table 班组
+create table FEE_WORKTEAM
+(
+  pk_workteam  CHAR(20) not null,
+  pk_group     VARCHAR2(20) default '~',
+  pk_org       VARCHAR2(20) default '~',
+  pk_org_v     VARCHAR2(20) default '~',
+  name         VARCHAR2(50),
+  sex          VARCHAR2(50),
+  age          INTEGER,
+  telphone     VARCHAR2(50),
+  address      VARCHAR2(50),
+  bank         VARCHAR2(20) default '~',
+  bankaccount  VARCHAR2(50),
+  isleader     CHAR(1),
+  pleader      VARCHAR2(20) default '~',
+  idnumber     VARCHAR2(50),
+  creator      VARCHAR2(20) default '~',
+  creationtime CHAR(19),
+  modifier     VARCHAR2(20) default '~',
+  modifiedtime CHAR(19),
+  vmemo        VARCHAR2(200),
+  vdef1        VARCHAR2(101),
+  vdef2        VARCHAR2(101),
+  vdef3        VARCHAR2(101),
+  vdef4        VARCHAR2(101),
+  vdef5        VARCHAR2(101),
+  vdef6        VARCHAR2(101),
+  vdef7        VARCHAR2(101),
+  vdef8        VARCHAR2(101),
+  vdef9        VARCHAR2(101),
+  vdef10       VARCHAR2(101),
+  vdef11       VARCHAR2(101),
+  vdef12       VARCHAR2(101),
+  vdef13       VARCHAR2(101),
+  vdef14       VARCHAR2(101),
+  vdef15       VARCHAR2(101),
+  vdef16       VARCHAR2(101),
+  vdef17       VARCHAR2(101),
+  vdef18       VARCHAR2(101),
+  vdef19       VARCHAR2(101),
+  vdef20       VARCHAR2(101),
+  ts           CHAR(19),
+  dr           INTEGER default 0
+)
+tablespace NNC_DATA01
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 512K
+    next 512K
+    minextents 1
+    maxextents unlimited
+    pctincrease 0
+  );
+-- Create/Recreate primary, unique and foreign key constraints 
+alter table FEE_WORKTEAM
+  add constraint PK_FEE_WORKTEAM primary key (PK_WORKTEAM)
+  using index 
+  tablespace NNC_DATA01
+  pctfree 10
+  initrans 2
+  maxtrans 255
+  storage
+  (
+    initial 512K
+    next 512K
+    minextents 1
+    maxextents unlimited
+    pctincrease 0
+  );

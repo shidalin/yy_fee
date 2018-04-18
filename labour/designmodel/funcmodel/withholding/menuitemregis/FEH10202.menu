@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="gbk"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<bean id="menuItem" class="nc.pubapp.pade.funcmodel.vo.MenuItem"><property name="dr" value="0"/>
+<property name="funModelFilePath" value="labour/designmodel/funcmodel/withholding/funcregis/FEH10202.menu"/>
+<property name="funcode" value="FEH10202"/>
+<property name="ismenutype" value="false"/>
+<property name="menuitemcode" value="FEH10202"/>
+<property name="menuitemname" value="人工费预提"/>
+<property name="pk_menuitem" value="0001ZZ10000000008TWJ"/>
+<property name="resid" value="DFEH10202"/>
+<property name="ts" value="2017-11-19 02:18:59"/>
+</bean>
+
+</beans>
