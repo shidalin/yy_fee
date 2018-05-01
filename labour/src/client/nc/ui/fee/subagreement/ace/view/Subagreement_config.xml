@@ -94,6 +94,8 @@
 		<property name="model">
 			<ref bean="bmModel" />
 		</property>
+		<!-- 是否进行模板非空校验 -->
+		<property name="templateNotNullValidate" value="true" />
 		<property name="nodekey" value="bt" />
 		<!-- 表体行操作按钮注册，这只是一组默认设置，开发人员需要自己在此添加其他需要的表体行操作按钮 -->
 		<property name="bodyLineActions">
@@ -517,7 +519,14 @@
 		<property name="exceptionHandler">
 			<ref bean="exceptionHandler" />
 		</property>
+		<property name="validationService" ref="validateService" />
 	</bean>
+		<!-- 保存组合校验 -->
+	<bean id="validateService" class="nc.ui.pubapp.uif2app.validation.TemplateNotNullValidation">
+		<property name="billForm" ref="billForm">
+		</property>
+	</bean>
+	
 
 	<!--======= 动作：[newActions] [取消] =========== -->
 	<bean id="cancelAction" class="nc.ui.pubapp.uif2app.actions.CancelAction">

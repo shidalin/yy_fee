@@ -10,7 +10,6 @@ import nc.bs.fee.subagreement.ace.bp.AceSubagreementDeleteBP;
 import nc.bs.fee.subagreement.ace.bp.AceSubagreementInsertBP;
 import nc.bs.fee.subagreement.ace.bp.AceSubagreementUpdateBP;
 import nc.bs.framework.common.NCLocator;
-import nc.desktop.ui.WorkbenchEnvironment;
 import nc.impl.pubapp.pattern.data.bill.BillLazyQuery;
 import nc.impl.pubapp.pattern.data.bill.SchemeBillQuery;
 import nc.impl.pubapp.pattern.data.bill.tool.BillTransferTool;
@@ -156,8 +155,10 @@ public abstract class AceSubagreementPubServiceImpl {
 	 * @return
 	 * @throws BusinessException
 	 */
-	public AggSubagreementVO[] queryForFE02(String year, String mouth)
+	public AggSubagreementVO[] queryForFE02(String year, String mouth_params)
 			throws BusinessException {
+		String mouth = mouth_params.split("_")[0];
+		String pk_org=mouth_params.split("_")[1];
 		StringBuffer stringBuffer = new StringBuffer();
 		stringBuffer.append("	select *	");
 		stringBuffer.append("	  from fee_subagreement t	");
@@ -180,8 +181,9 @@ public abstract class AceSubagreementPubServiceImpl {
 						+ "','yyyy-mm')"
 						+ "	and t.pk_org = '"
 						//增加按当前登录公司进行数据过滤
-						+ WorkbenchEnvironment.getInstance().getLoginUser()
-								.getPk_org() + "'");
+						+ pk_org+ "'");
+//						WorkbenchEnvironment.getInstance().getLoginUser()
+//								.getPk_org() + "'");
 		String querySql = stringBuffer.toString();
 		List hvolist = (List) NCLocator
 				.getInstance()

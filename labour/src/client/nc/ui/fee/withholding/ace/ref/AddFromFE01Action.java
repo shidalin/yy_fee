@@ -13,13 +13,16 @@ import javax.swing.border.EmptyBorder;
 
 import nc.bs.framework.common.NCLocator;
 import nc.bs.pub.pf.PfUtilTools;
+import nc.desktop.ui.WorkbenchEnvironment;
 import nc.itf.fee.ISubagreementMaintain;
 import nc.itf.fee.IWithholdingMaintain;
 import nc.itf.uap.pf.IPFBusiAction;
 import nc.ui.pub.beans.UIDialog;
 import nc.ui.pubapp.uif2app.model.BillManageModel;
 import nc.ui.pubapp.uif2app.query2.model.IModelDataManager;
+import nc.ui.pubapp.uif2app.view.BaseOrgPanel;
 import nc.ui.pubapp.uif2app.view.BillForm;
+import nc.ui.pubapp.uif2app.view.util.OrgUtils;
 import nc.ui.uif2.NCAction;
 import nc.ui.uif2.ShowStatusBarMsgUtil;
 import nc.ui.uif2.UIState;
@@ -72,11 +75,16 @@ public class AddFromFE01Action extends NCAction {
 				"查询条件选择框", "请选择预提年月信息", year, mouth, 5);
 		if (selectInfo != null && Arrays.asList(selectInfo) != null) {
 			// 后台查询分包协议数据
+			String pk_org_p = OrgUtils.getDefaultOrgPK(String.valueOf(BaseOrgPanel.DEFAULTORG_INDIVIDUATION));
+		
+			if(pk_org_p==null){
+				ExceptionUtils.wrappBusinessException("请选择默认组织");
+			}
 			AggSubagreementVO[] srcVOs = NCLocator
 					.getInstance()
 					.lookup(ISubagreementMaintain.class)
 					.queryForFE02(selectInfo[0].toString(),
-							selectInfo[1].toString());
+							selectInfo[1].toString()+"_"+pk_org_p);
 			if (srcVOs == null || srcVOs.length == 0) {
 				ExceptionUtils.wrappBusinessException("没有匹配的数据，请重新查询");
 			}
